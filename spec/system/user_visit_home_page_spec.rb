@@ -17,7 +17,16 @@ describe 'User visit homepage' do
 
     expect(page).to have_content 'Pão de forma'
     expect(page).to have_content 'Pudim de pão'
-  
+    expect(page).not_to have_content 'Não existem receitas cadastradas'
+
   end
+
+  it 'and does not have a list of recipes' do 
+
+    visit root_path
+
+    expect(page).to have_content 'Não existem receitas cadastradas'
+  end 
+  
   
 end
