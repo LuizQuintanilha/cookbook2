@@ -1,0 +1,13 @@
+<h2>Cadastrar Receita</h2>
+
+<%= form_with(model: @recipe) do |f| %>
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name %>
+  <%= f.label :time_to_prepare, 'Tempo de preparo' %>
+  <%= f.text_field :time_to_prepare  %>
+  <%= f.label :recipe_type, 'Tipo de receita' %>
+  <%= f.text_field :recipe_type %>
+  <%= f.label :ingredients, 'Ingredientes' %>
+  <%= f.text_area :ingredients %>
+  <%= f.submit 'Salvar' %>
+<% end %>
