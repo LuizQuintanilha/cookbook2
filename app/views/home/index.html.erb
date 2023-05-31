@@ -4,7 +4,7 @@
 
 <% if @recipes.any? %>
   <% @recipes.each do |r|%>
-    <%= r.name %>
+    <%= link_to r.name, recipe_path(r) %> 
   <% end %>
 <% else %>
   <p>Não existem receitas cadastradas</p>
