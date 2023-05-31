@@ -1,4 +1,7 @@
 <h2>Cookbook</h2>
+
+<%= link_to 'Cadastrar Receita', new_recipe_path %>
+
 <% if @recipes.any? %>
   <% @recipes.each do |r|%>
     <%= r.name %>
