@@ -1,0 +1,8 @@
+<h2>Cookbook</h2>
+<% if @recipes.any? %>
+  <% @recipes.each do |r|%>
+    <%= r.name %>
+  <% end %>
+<% else %>
+  <p>Não existem receitas cadastradas</p>
+<% end %>
